@@ -28,6 +28,6 @@ public class GoalScript : MonoBehaviour
             m_score = 0;
         }
 
-        m_Moving.transform.position = new Vector2(transform.position.x, m_yPos);
+        m_Moving.transform.position = new Vector3(transform.position.x, m_yPos, transform.position.z);
     }
 }

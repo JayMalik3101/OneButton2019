@@ -22,16 +22,16 @@ public class Shooting : MonoBehaviour
         if (Input.GetKey("space"))
         {
             //m_Script.m_Pause = true;
-            m_Addforce += 0.1f;
-            if (m_Addforce >= 50)
+            m_Addforce += 0.3f;
+            if (m_Addforce >= 30)
             {
-                m_Addforce = 50;
+                m_Addforce = 30;
             }
         }
         if(Input.GetKeyUp("space"))
         {
             GameObject projectile = Instantiate(m_Bullet, transform.position, transform.parent.rotation) as GameObject;
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();
+            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = projectile.transform.right * m_Addforce;
             m_Addforce = 0;
             //m_Script.m_Pause = false;

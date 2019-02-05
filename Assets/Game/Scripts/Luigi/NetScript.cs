@@ -12,7 +12,7 @@ public class NetScript : MonoBehaviour
         if (collision.CompareTag("Good"))
         {
             m_Goal.GetComponent<GoalScript>().m_score += 1;
-            m_Goal.GetComponent<GoalScript>().m_yPos = Random.Range(-4, 1);
+            m_Goal.GetComponent<GoalScript>().m_yPos = Random.Range(-2, 0);
         }
         else if (collision.CompareTag("Bad"))
         {
