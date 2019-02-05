@@ -15,8 +15,8 @@ MonoBehaviour:
   settings:
   - {fileID: 114195339755601430}
   - {fileID: 114872678004005536}
-  - {fileID: 114361673926302624}
   - {fileID: 114093495862578326}
+  - {fileID: 114405259109338766}
 --- !u!114 &114093495862578326
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1372,7 +1372,7 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &114361673926302624
+--- !u!114 &114405259109338766
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1390,7 +1390,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 40.55
+    value: 25.45
   threshold:
     overrideState: 1
     value: 1
