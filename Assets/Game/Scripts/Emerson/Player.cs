@@ -13,11 +13,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        //if (m_Pause == false)
-        //{
+        if (m_Pause == false)
+        {
             float zRtation = Mathf.PingPong(Time.time * 100, 90f);
             transform.localRotation = Quaternion.Euler(0, 0, zRtation);
-        //}
+        }
 
     }
 }
