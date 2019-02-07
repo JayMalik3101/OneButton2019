@@ -21,6 +21,7 @@ public class Shooting : MonoBehaviour
 
     private Player m_Script;
 
+    [SerializeField]
     Image m_ChargeBar;
 
     [SerializeField] private TMP_Text m_uiText;
@@ -43,7 +44,7 @@ public class Shooting : MonoBehaviour
         if (m_Timer == 0 && Input.GetKey("space"))
         {
             m_Addforce += 0.15f;
-            //m_ChargeBar.fillAmount = m_Maxforce / m_Maxforce; 
+            m_ChargeBar.fillAmount = m_Maxforce / m_Maxforce; 
             if (m_Addforce >= 15)
             {
                 m_Addforce = 15;
