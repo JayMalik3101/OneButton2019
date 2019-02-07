@@ -26,7 +26,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private TMP_Text m_uiText;
     [SerializeField] private float m_CooldownTimer;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     void Start()
     {
         m_StartTimer = false;
@@ -36,20 +36,20 @@ public class Shooting : MonoBehaviour
         m_Charge = m_Maxforce;
     }
 
-    // Update is called once per frame
+    // Update is called once per frame 
     void Update()
     {
         Timer();
         if (m_Timer == 0 && Input.GetKey("space"))
         {
             m_Addforce += 0.15f;
-            //m_ChargeBar.fillAmount = m_Maxforce / m_Maxforce;
+            //m_ChargeBar.fillAmount = m_Maxforce / m_Maxforce; 
             if (m_Addforce >= 15)
             {
                 m_Addforce = 15;
             }
         }
-        if(m_Timer == 0 && Input.GetKeyUp("space"))
+        if (m_Timer == 0 && Input.GetKeyUp("space"))
         {
             GameObject projectile = Instantiate(m_Bullet, transform.position, transform.parent.rotation) as GameObject;
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
@@ -57,13 +57,13 @@ public class Shooting : MonoBehaviour
             m_StartTimer = true;
             m_Addforce = 0;
         }
-        
+
     }
 
     private void Timer()
     {
-        //m_StartTimer = true;
-         
+        //m_StartTimer = true; 
+
         if (m_StartTimer == true)
         {
             m_Timer += Time.deltaTime;
@@ -74,6 +74,6 @@ public class Shooting : MonoBehaviour
                 m_Timer = 0.0f;
                 m_StartTimer = false;
             }
-        }  
+        }
     }
 }
