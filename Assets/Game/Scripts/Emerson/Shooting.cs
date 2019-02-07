@@ -21,7 +21,6 @@ public class Shooting : MonoBehaviour
 
     private Player m_Script;
 
-    [SerializeField]
     Image m_ChargeBar;
 
     [SerializeField] private TMP_Text m_uiText;
